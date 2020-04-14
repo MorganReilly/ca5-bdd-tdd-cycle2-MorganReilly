@@ -3,13 +3,12 @@ require 'spec_helper'
 describe Movie do
   describe "#similar" do
     it "should find movies by the same director" do
-        ## YOUR TEST CODE HERE
-        skip("Not yet implemented")
+        Movie.should_receive(:search_directors).with('Star Wars')
+        Movie.search_directors('Star Wars')
     end
 
     it "should not find movies by different directors" do
-        ## YOUR TEST CODE HERE
-        skip("Not yet implemented")
+        Movie.should_not_receive(:search_directors).with('Star Wars') 
     end
   end
 end

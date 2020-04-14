@@ -5,7 +5,6 @@ Feature: search for movies by director
   I want to include and serach on director information in movies I enter
 
 Background: movies in database
-
   Given the following movies exist:
   | title        | rating | director     | release_date |
   | Star Wars    | PG     | George Lucas |   1977-05-25 |
