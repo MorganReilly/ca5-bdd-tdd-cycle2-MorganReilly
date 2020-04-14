@@ -62,6 +62,11 @@ class MoviesController < ApplicationController
   end
 
   def search_directors
+    @movie = Movie.find(params[:id])
+    @director = @movie.director
+    # flash[:warning] = "'#{params[:search_terms]}' has no director info"
+    flash[:warning] = "'#{@movie.title}' has no director info"
+    redirect_to movies_path
   end
 
 end
